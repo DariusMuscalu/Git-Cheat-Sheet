@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family:  'Oswald', sans-serif;
+    font-size: 2.5em
+}
+
+h2 {
+    font-size: 2.5em;
+    padding: 2em 0;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    padding: 1em 0;
+}
+
+header {
+    text-align: right;
+    padding: 12em 0;
+    margin: 0 auto;
+    background-image: url("https://tr3.cbsistatic.com/hub/i/r/2017/10/31/af72d5e4-2f4c-48b5-954c-e4fa24fb0a97/resize/1200x/9f5c03620b98aa0a8d1a3caedded38fe/git-logo.jpg");
+    word-wrap: break-word;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5em 0;
+}
+
+ul, li, a {
+    text-decoration: none;
+    list-style-type: decimal;
+    color: #000;
+    padding: 0.7em;
+    font-size: 1.3em;
+}
+ 
+li:hover {
+    text-decoration: underline;
+}
+
+button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    padding: 2em;
+    cursor: pointer;
+}
+
+.container i {
+    padding-left: 2em;
+    word-wrap: break-word;
+}
+
+#about-me img {
+    border-radius: 50%;
+    height: 15em;
+    width: 14em;
+    padding-right: 1em;
+}

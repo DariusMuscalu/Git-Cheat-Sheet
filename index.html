@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/35df76d740.js" crossorigin="anonymous"></script>
+    <title>Git CheatSheet</title>
+</head>
+<body>
+    <header>
+        <h1>Git Cheat Sheet</h1>
+        <p><strong>The essential Git commands every developer must know</strong></p>
+        <!-- Asta il pui pe mobile view 
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRCTWXPlqv6XyPVLznut1yOkIJKz9BDWU6w&usqp=CAU" alt="git-logo">
+        -->
+    </header>
+
+    <section id="upper-section">
+        <div class="container">
+            <h2>This cheat sheet covers all of the Basics Git commands</h2>
+            <ul>
+                <li><a href="#">Creating snapshots</a></li>
+                <li><a href="#">Browsing history</a></li>
+                <li><a href="#">Branching & merging</a></li>
+                <li><a href="#">Collaboration using Git & GitHub</a></li>
+                <li><a href="#">Rewriting history</a></li>
+            </ul>
+        </div>
+        <!-- asta ar putea sa fie un aside sau ceva ciu overflow.-->
+    </section>
+
+    <section id="about-me">
+        <div class="container">
+            <img src="https://townsquare.media/site/171/files/2011/08/monkey-with-gun.jpg?w=980&q=75" alt="myself" align="left">
+            <p>Hi! My name is Muscalu Darius! By this project I want to help others learning the Git basics with this git cheat sheet and also show my Git, Github, HTML and CSS skills! I hope you find this cheat sheet useful and come to it whenever you need!</p>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">
+            <h3>Want to master Git?</h3>
+            <p>Stop wasting your time memorizing Git commands or browsing disconnected tutorials. <br> If you don’t know how Git works, you won’t get far.</p>
+            <h3>My Git Cheat Sheet teaches you everything you need to know to use Git like a pro.</h3>
+            <ul>
+                <li>Learn & understand Git inside out</li>
+                <li>Master the command line</li>
+                <li>Version your code and confidently recover from mistakes</li>
+                <li>Collaborate effectively with others using Git and GitHub</li>
+                <li>Boost your career opportunities</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="creating-snapshots">
+        <div class="container">
+            <h2>Creating Snapshots</h2>
+            <h3>Initializing a repository</h3>
+            <p>git init</p>
+
+            <h3>Staging files</h3>
+            <p>
+                git add file1.js             <i class="fas fa-hashtag"></i> Stages a single file <br>
+                git add file1.js file2.js    <i class="fas fa-hashtag"></i> Stages multiple files <br>
+                git add *.js                 <i class="fas fa-hashtag"></i> Stages with a pattern <br>
+                git add .                    <i class="fas fa-hashtag"></i> Stages the current directory and all its content <br>
+                </p>
+
+            <h3>Viewing the status</h3>
+            <p>
+                git status           <i class="fas fa-hashtag"></i> Full status <br>
+                git status -s        <i class="fas fa-hashtag"></i> Short status
+            </p>
+
+            <h3>Committing the staged files </h3>
+            <p>
+                git commit -m “Message” <i class="fas fa-hashtag"></i> Commits with a one-line message <br>
+                git commit <i class="fas fa-hashtag"></i> Opens the default editor to type a long message 
+            </p>
+
+            <h3>Skipping the staging area </h3>
+            <p>
+                git commit -am “Message”  
+            </p>
+
+            <h3>Removing files</h3>
+            <p>
+                git rm file1.js <i class="fas fa-hashtag"></i> Removes from working directory and staging area <br>
+                git rm --cached file1.js <i class="fas fa-hashtag"></i> Removes from staging area only</p>
+
+            <h3>Renaming or moving files</h3>
+            <p>git mv file1.js file1.txt</p>
+
+            <h3>Viewing the staged/unstaged changes</h3>
+            <p>
+                git diff <i class="fas fa-hashtag"></i> Shows unstaged changes <br>
+                git diff --staged <i class="fas fa-hashtag"></i> Shows staged changes <br>
+                git diff --cached <i class="fas fa-hashtag"></i> Same as the above</p>
+            
+            <h3>Viewing the history</h3>
+            <p>
+                git log <i class="fas fa-hashtag"></i> Full history <br>
+                git log --oneline <i class="fas fa-hashtag"></i> Summary <br>
+                git log --reverse <i class="fas fa-hashtag"></i> Lists the commits from the oldest to the newest 
+            </p>
+
+            <h3>Viewing a commit</h3>
+            <p>
+                git show 921a2ff <i class="fas fa-hashtag"></i> Shows the given commit <br>
+                git show HEAD <i class="fas fa-hashtag"></i> Shows the last commit <br>
+                git show HEAD~2 <i class="fas fa-hashtag"></i> Two steps before the last commit <br>
+                git show HEAD:file.js <i class="fas fa-hashtag"></i> Shows the version of file.js stored in the last commit 
+            </p>
+
+            <h3>Unstaging files (undoing git add)</h3>
+            <p>git restore --staged file.js <i class="fas fa-hashtag"></i> Copies the last version of file.js from repo to index 
+            </p>
+
+            <h3>Discarding local changes</h3>
+            <p>
+                git restore file.js <i class="fas fa-hashtag"></i> Copies file.js from index to working directory <br>
+                git restore file1.js file2.js <i class="fas fa-hashtag"></i> Restores multiple files in working directory <br>
+                git restore . <i class="fas fa-hashtag"></i> Discards all local changes (except untracked files) <br>
+                git clean -fd <i class="fas fa-hashtag"></i> Removes all untracked files 
+                </p>
+
+            <h3>Restoring an earlier version of a file</h3>
+            <p>git restore --source=HEAD~2 file.js</pre>
+        </div>
+
+    </section>
+    
+    <section id="browsing-history">
+        <div class="container">
+            <h3>Viewing the history</h3>
+            <p>git log --stat <i class="fas fa-hashtag"></i> Shows the list of modified files <br>
+                 git log --patch <i class="fas fa-hashtag"></i> Shows the actual changes (patches) 
+            </p>
+
+            <h3>Filtering the history</h3>
+            <p>git log -3 <i class="fas fa-hashtag"></i> Shows the last 3 entries <br>
+                 git log --author=“Mosh” <br>
+                 git log --before=“2020-08-17” <br>
+                 git log --after=“one week ago” <br>
+                 git log --grep=“GUI” <i class="fas fa-hashtag"></i> Commits with “GUI” in their message <br>
+                 git log -S“GUI” <i class="fas fa-hashtag"></i> Commits with “GUI” in their patches <br>
+                 git log hash1..hash2 <i class="fas fa-hashtag"></i> Range of commits <br>
+                 git log file.txt <i class="fas fa-hashtag"></i> Commits that touched file.txt </p>
+
+            <h3>Formatting the log output</h3>
+            <p>git log --pretty=format:”%an committed %H”
+            </p>
+
+            <h3>Creating an alias</h3>
+            <p>git config --global alias.lg “log --oneline"</p>
+
+            <h3>Viewing a commit</h3>
+            <p>git show HEAD~2 <br>
+                 git show HEAD~2:file1.txt <i class="fas fa-hashtag"></i> Shows the version of file stored in this commit 
+                </p>
+            
+            <h3>Comparing commits</h3>
+            <p>git diff HEAD~2 HEAD <i class="fas fa-hashtag"></i> Shows the changes between two commits <br>
+                 git diff HEAD~2 HEAD file.txt <i class="fas fa-hashtag"></i> Changes to file.txt only </p>
+            
+            <h3>Checking out a commit</h3>
+            <p>git checkout dad47ed <i class="fas fa-hashtag"></i> Checks out the given commit <br>
+                 git checkout master <i class="fas fa-hashtag"></i> Checks out the master branch </p>
+
+            <h3>Finding a bad commit</h3>
+            <p>git bisect start <br>
+                 git bisect bad <i class="fas fa-hashtag"></i> Marks the current commit as a bad commit <br>
+                 git bisect good ca49180 <i class="fas fa-hashtag"></i> Marks the given commit as a good  commit <br>
+                 git bisect reset <i class="fas fa-hashtag"></i> Terminates the bisect session </p>
+
+            <h3>Finding contributors</h3>
+            <p>git shortlog</p>
+
+            <h3>Viewing the history of a file</h3>
+            <p>git log file.txt <i class="fas fa-hashtag"></i> Shows the commits that touched file.txt <br>
+                 git log --stat file.txt <i class="fas fa-hashtag"></i> Shows statistics (the number of  changes) for file.txt <br>
+                 git log --patch file.txt <i class="fas fa-hashtag"></i> Shows the patches (changes) applied to file.txt</p>
+
+            <h3>Finding the author of lines</h3>
+            <p>git blame file.txt <i class="fas fa-hashtag"></i> Shows the author of each line in file.txt</p>
+
+            <h3>Tagging</h3>
+            <p>git tag v1.0 <i class="fas fa-hashtag"></i> Tags the last commit as v1.0 <br>
+                 git tag v1.0 5e7a828 <i class="fas fa-hashtag"></i> Tags an earlier commit <br>
+                 git tag <i class="fas fa-hashtag"></i> Lists all the tags <br>
+                 git tag -d v1.0 <i class="fas fa-hashtag"></i> Deletes the given tag</p>
+        </div>
+    </section>
+
+    <section id="branching-merging ">
+        <div class="container">
+            <h3>Managing branches</h3>
+            <p>git branch bugfix <i class="fas fa-hashtag"></i> Creates a new branch called bugfix <br>
+                 git checkout bugfix <i class="fas fa-hashtag"></i> Switches to the bugfix branch <br>
+                 git switch bugfix <i class="fas fa-hashtag"></i> Same as the above <br>
+                 git switch -C bugfix <i class="fas fa-hashtag"></i> Creates and switches <br>
+                 git branch -d bugfix <i class="fas fa-hashtag"></i> Deletes the bugfix branch  <br>
+                </p>
+
+            <h3>Comparing branches</h3>
+            <p>git log master..bugfix <i class="fas fa-hashtag"></i> Lists the commits in the bugfix branch not in master <br>
+                 git diff master..bugfix <i class="fas fa-hashtag"></i> Shows the summary of changes 
+                </p>
+                
+            <h3>Stashing</h3>
+            <p>git stash push -m “New tax rules” <i class="fas fa-hashtag"></i> Creates a new stash <br>
+                 git stash list <i class="fas fa-hashtag"></i> Lists all the stashes <br>
+                 git stash show stash@{1} <i class="fas fa-hashtag"></i> Shows the given stash <br>
+                 git stash show 1 <i class="fas fa-hashtag"></i> shortcut for stash@{1} <br>
+                 git stash apply 1 <i class="fas fa-hashtag"></i> Applies the given stash to the working dir <br>
+                 git stash drop 1 <i class="fas fa-hashtag"></i> Deletes the given stash <br>
+                 git stash clear <i class="fas fa-hashtag"></i> Deletes all the stashes 
+                </p>
+
+            <h3>Merging</h3>
+            <p>git merge bugfix <i class="fas fa-hashtag"></i> Merges the bugfix branch into the current branch <br>
+                 git merge --no-ff bugfix <i class="fas fa-hashtag"></i> Creates a merge commit even if FF is possible <br>
+                 git merge --squash bugfix <i class="fas fa-hashtag"></i> Performs a squash merge <br>
+                 git merge --abort <i class="fas fa-hashtag"></i> Aborts the merge </p>
+
+            <h3>Viewing the merged branches</h3>
+            <p>git branch --merged <i class="fas fa-hashtag"></i> Shows the merged branches <br>
+                 git branch --no-merged <i class="fas fa-hashtag"></i> Shows the unmerged branches </p>
+
+            <h3>Rebasing</h3>
+            <p>git rebase master <i class="fas fa-hashtag"></i> Changes the base of the current branch 
+            </p>
+
+            <h3>Cherry picking</h3>
+             <p>git cherry-pick dad47ed <i class="fas fa-hashtag"></i> Applies the given commit on the current branch </p>
+        
+        </div>
+    </section>
+
+    <section id="collaboration">
+        <div class="container">
+            <h3>Cloning a repository</h3>
+            <p>git clone url</p>
+
+            <h3>Syncing with remotes</h3>
+            <p>git fetch origin master <i class="fas fa-hashtag"></i> Fetches master from origin <br>
+                 git fetch origin <i class="fas fa-hashtag"></i> Fetches all objects from origin <br>
+                 git fetch <i class="fas fa-hashtag"></i> Shortcut for “git fetch origin” <br>
+                 git pull <i class="fas fa-hashtag"></i> Fetch + merge <br>
+                 git push origin master <i class="fas fa-hashtag"></i> Pushes master to origin <br>
+                 git push <i class="fas fa-hashtag"></i> Shortcut for “git push origin master” </p>
+
+            <h3>Sharing tags</h3>
+            <p>git push origin v1.0 <i class="fas fa-hashtag"></i> Pushes tag v1.0 to origin <br>
+                 git push origin —delete v1.0 </p>
+
+            <h3>Sharing branches</h3>
+            <p>git branch -r <i class="fas fa-hashtag"></i> Shows remote tracking branches <br>
+                 git branch -vv <i class="fas fa-hashtag"></i> Shows local & remote tracking branches <br>
+                 git push -u origin bugfix <i class="fas fa-hashtag"></i> Pushes bugfix to origin <br>
+                 git push -d origin bugfix <i class="fas fa-hashtag"></i> Removes bugfix from origin </p>
+
+            <h3>Managing remotes</h3>
+            <p>git remote <i class="fas fa-hashtag"></i> Shows remote repos <br>
+                 git remote add upstream url <i class="fas fa-hashtag"></i> Adds a new remote called upstream <br>
+                 git remote rm upstream <i class="fas fa-hashtag"></i> Remotes upstream </p>
+        </div> 
+    </section>
+
+    <section id="rewriting-history">
+        <div class="container">
+            <h3>Undoing commits </h3>
+            <p>git reset --soft HEAD^ <i class="fas fa-hashtag"></i> Removes the last commit, keeps changed staged <br>
+                 git reset --mixed HEAD^ <i class="fas fa-hashtag"></i> Unstages the changes as well <br>
+                 git reset --hard HEAD^ <i class="fas fa-hashtag"></i> Discards local changes </p>
+
+            <h3>Reverting commits</h3>
+            <p>git revert 72856ea <i class="fas fa-hashtag"></i> Reverts the given commit <br>
+                 git revert HEAD~3.. <i class="fas fa-hashtag"></i> Reverts the last three commits <br>
+                 git revert --no-commit HEAD~3.. </p>
+
+            <h3>Recovering lost commits</h3>
+            <p>git reflog <i class="fas fa-hashtag"></i> <u>Shows the history of HEAD</u> <br>
+                 git reflog show bugfix <i class="fas fa-hashtag"></i> Shows the history of bugfix pointer </p>
+
+            <h3>Amending the last commit</h3>
+            <p>git commit --amend</p>
+
+            <h3>Interactive rebasing</h3>
+            <p>git rebase -i HEAD~5</p>
+        </div>
+    </section>
+
+    <a href="#"><button type="button"><i class="fas fa-arrow-up"></i></button></a>
+
+</body>
+</html>
