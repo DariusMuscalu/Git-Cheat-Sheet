@@ -8,15 +8,21 @@
     <title>Git CheatSheet</title>
 </head>
 <body>
+    <main id="main-doc">
     <header>
+        <nav id="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#">About Me</a></li>
+                <li><a class="nav-link" href="#">Contact Me</a></li>
+                <h3>Placed here because FCC prject forced me to :P</h3>
+                <!-- Added h3 and classes to a tags bcs FCC project is forcing me to do this if i want to add the project!-->
+            </ul>
+        </nav>
         <h1>Git Cheat Sheet</h1>
         <p><strong>The essential Git commands every developer must know</strong></p>
-        <!-- Asta il pui pe mobile view 
-             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRCTWXPlqv6XyPVLznut1yOkIJKz9BDWU6w&usqp=CAU" alt="git-logo">
-        -->
     </header>
 
-    <section id="upper-section">
+    <section class="main-section">
         <div class="container">
             <h2>This cheat sheet covers all of the Basics Git commands</h2>
             <ul>
@@ -280,7 +286,7 @@
                  git revert --no-commit HEAD~3.. </p>
 
             <h3>Recovering lost commits</h3>
-            <p>git reflog <i class="fas fa-hashtag"></i> <u>Shows the history of HEAD</u> <br>
+            <p>git reflog <i class="fas fa-hashtag"></i>Shows the history of HEAD <br>
                  git reflog show bugfix <i class="fas fa-hashtag"></i> Shows the history of bugfix pointer </p>
 
             <h3>Amending the last commit</h3>
@@ -292,6 +298,6 @@
     </section>
 
     <a href="#"><button type="button"><i class="fas fa-arrow-up"></i></button></a>
-
+</main>
 </body>
 </html>

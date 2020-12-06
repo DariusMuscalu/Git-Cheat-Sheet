@@ -8,7 +8,8 @@
 
 h1 {
     font-family:  'Oswald', sans-serif;
-    font-size: 2.5em
+    font-size: 2.5em;
+    margin-right: 1em;
 }
 
 h2 {
@@ -36,6 +37,23 @@ header {
     background-size: cover;
 }
 
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav h3 {
+    display: none;
+    /* Made this bcs FCC forced me to place a heading tag in my nav-bar but i don't need to */
+}
+
+nav ul, nav li {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+}
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -45,9 +63,9 @@ header {
 ul, li, a {
     text-decoration: none;
     list-style-type: decimal;
-    color: #000;
+    color: #574b90;
     padding: 0.7em;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
  
 li:hover {
@@ -64,7 +82,8 @@ button {
 }
 
 .container i {
-    padding-left: 2.5em;
+    text-align: center;
+    padding-left: 1em;
     word-wrap: break-word;
 }
 
@@ -74,3 +93,32 @@ button {
     width: 14em;
     padding-right: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+    section {
+        font-size: 0.7em;
+    }
+
+    i {
+        margin: 0.5em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    header {
+        font-size: 0.7em;
+        word-wrap: break-word;
+        padding: 4.9em;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 2.5em;
+    }
+}
+
+
