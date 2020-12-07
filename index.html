@@ -12,10 +12,10 @@
     <header>
         <nav id="nav-bar">
             <ul>
-                <li><a class="nav-link" href="#">About Me</a></li>
-                <li><a class="nav-link" href="#">Contact Me</a></li>
                 <h3>Placed here because FCC prject forced me to :P</h3>
                 <!-- Added h3 and classes to a tags bcs FCC project is forcing me to do this if i want to add the project!-->
+                <li><a class="nav-link" href="#">About Me</a></li>
+                <li><a class="nav-link" href="#">Contact Me</a></li>
             </ul>
         </nav>
         <h1>Git Cheat Sheet</h1>
@@ -26,11 +26,11 @@
         <div class="container">
             <h2>This cheat sheet covers all of the Basics Git commands</h2>
             <ul>
-                <li><a href="#">Creating snapshots</a></li>
-                <li><a href="#">Browsing history</a></li>
-                <li><a href="#">Branching & merging</a></li>
-                <li><a href="#">Collaboration using Git & GitHub</a></li>
-                <li><a href="#">Rewriting history</a></li>
+                <li><a href="#creating-snapshots">Creating snapshots</a></li>
+                <li><a href="#browsing-history">Browsing history</a></li>
+                <li><a href="#branching-merging">Branching & merging</a></li>
+                <li><a href="#collaboration">Collaboration using Git & GitHub</a></li>
+                <li><a href="#rewriting-history">Rewriting history</a></li>
             </ul>
         </div>
         <!-- asta ar putea sa fie un aside sau ceva ciu overflow.-->
@@ -66,8 +66,8 @@
 
             <h3>Staging files</h3>
             <p>
-                git add file1.js             <i class="fas fa-hashtag"></i> Stages a single file <br>
-                git add file1.js file2.js    <i class="fas fa-hashtag"></i> Stages multiple files <br>
+                git add file1.js <i class="fas fa-hashtag"> Stages a single file</i><br>
+                git add file1.js file2.js    <i class="fas fa-hashtag"> Stages multiple files</i><br>
                 git add *.js                 <i class="fas fa-hashtag"></i> Stages with a pattern <br>
                 git add .                    <i class="fas fa-hashtag"></i> Stages the current directory and all its content <br>
                 </p>
@@ -138,6 +138,7 @@
     
     <section id="browsing-history">
         <div class="container">
+            <h2>Browsing History</h2>
             <h3>Viewing the history</h3>
             <p>git log --stat <i class="fas fa-hashtag"></i> Shows the list of modified files <br>
                  git log --patch <i class="fas fa-hashtag"></i> Shows the actual changes (patches) 
@@ -198,8 +199,9 @@
         </div>
     </section>
 
-    <section id="branching-merging ">
+    <section id="branching-merging">
         <div class="container">
+            <h2>Branching & Merging</h2>
             <h3>Managing branches</h3>
             <p>git branch bugfix <i class="fas fa-hashtag"></i> Creates a new branch called bugfix <br>
                  git checkout bugfix <i class="fas fa-hashtag"></i> Switches to the bugfix branch <br>
@@ -245,6 +247,7 @@
 
     <section id="collaboration">
         <div class="container">
+            <h2>Collaboration</h2>
             <h3>Cloning a repository</h3>
             <p>git clone url</p>
 
@@ -275,6 +278,7 @@
 
     <section id="rewriting-history">
         <div class="container">
+            <h2>Rewriting History</h2>
             <h3>Undoing commits </h3>
             <p>git reset --soft HEAD^ <i class="fas fa-hashtag"></i> Removes the last commit, keeps changed staged <br>
                  git reset --mixed HEAD^ <i class="fas fa-hashtag"></i> Unstages the changes as well <br>
