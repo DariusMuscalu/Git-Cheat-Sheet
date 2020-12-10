@@ -112,7 +112,7 @@ button {
     header {
         font-size: 0.7em;
         word-wrap: break-word;
-        padding: 4.9em;
+        padding: 6.4em;
         font-weight: 700;
         font-style: italic;
         text-align: center;
@@ -123,10 +123,20 @@ button {
     }
 
     nav {
-       right: 5em;
+       right: 1em;
+    }
+
+    header p {
+        margin: 0 auto;
     }
 }
 
-
+@media only screen and (max-width: 1250px) {
+    header p {
+        
+        padding-top: 7.4em;
+        margin: 0 4em;
+    }
+}
 
 
