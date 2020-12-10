@@ -127,15 +127,13 @@ button {
     }
 
     header p {
-        margin: 0 auto;
+        margin: 0 1em;
     }
 }
 
 @media only screen and (max-width: 1250px) {
     header p {
-        
         padding-top: 7.4em;
-        margin: 0 4em;
     }
 }
 
